@@ -1,0 +1,23 @@
+.singerProfile{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.IMG-of-Songer{
+    width: 50%;
+    height: 100%;
+}
+.IMG-of-song{
+    height: 100px;
+}
+.singersProfil{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.eachSongOf{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

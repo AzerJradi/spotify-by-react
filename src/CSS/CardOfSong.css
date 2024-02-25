@@ -1,0 +1,12 @@
+.SongName{
+    text-decoration: underline white;
+    font-size: 20px;
+}
+.SingerName{
+    text-decoration: underline white;
+    font-size: 20px;
+    margin-left: 35%;
+}
+.card{
+    margin-bottom: 20px;
+}

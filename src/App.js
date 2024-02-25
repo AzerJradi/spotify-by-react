@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './CSS/App.css'
+import { Route, Routes } from "react-router-dom";
+import FilterAndNavbar from "./Components/FilterAndNavbar";
+import Playlist from "./Components/Playlist";
+import ListOfCards from "./Components/ListOfCards";
+import MusicBottom from "./Components/MusicBottom";
+import MenuBtn from "./Components/MenuBtn";
+import SongProfil from "./Components/SongProfil";
+import ListOfSongers from "./Components/ListOfSongers";
+import Data from './DataBase.json';
+import SongData from './Singers.json';
+import Poadcast from './Poadcasts.json'
+import TheSongerTitleAndStuff from './Components/TheSongerTitleAndStuff';
+import LoginIn from './Components/LoginIn';
+import SignUp from './Components/SignUp';
+import ListOfPoadcasts from './Components/ListOfPoadcasts';
+import PoadcastProfil from './Components/PoadcastProfil';
 
 function App() {
+  const [titleValue, setTitleValue] = useState("");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <FilterAndNavbar setTitleValue={setTitleValue} titleValue={titleValue}/>
+      <div className="app">
+        <Routes>
+          <Route path='/' element={ <><Playlist/> <ListOfCards theData={Data}/></>  }/>
+            <Route path="/thehome" element={ <><Playlist/> <ListOfCards theData={Data}/></>  }/>
+            <Route path='/MusicBottom' element={<MusicBottom/>}/>
+            <Route path="/menu" element={<><MenuBtn/> <ListOfCards theData={Data}/></>}/>
+            <Route path="/profil" element={<LoginIn/>}/>
+            <Route path='/:id' element={<SongProfil/>}/>
+            <Route path='/songer/:id' element={<TheSongerTitleAndStuff/>}/>
+            <Route path="/ListOfSingers" element={<ListOfSongers SongData={SongData}/>}/>
+            <Route path="/Playlist" element={<Playlist/>}/>
+            <Route path="/AllSingers" element={<ListOfSongers SongData={SongData}/>}/>
+            <Route path="/Poadcasts" element={<ListOfPoadcasts Poadcast={Poadcast}/>}/>
+            <Route path='/singUp' element={<SignUp/>}/>
+            <Route path='/poadcast/:id' element={<PoadcastProfil/>}/>
+        </Routes>
+      </div>
+    </>
   );
 }
 

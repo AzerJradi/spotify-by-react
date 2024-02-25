@@ -1,0 +1,34 @@
+.card-container-singers{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.imgOfSonger{
+    width: 300px;
+    height: 300px;
+    border-radius: 12px 12px 0 0;
+    border: 5px solid white;
+}
+.p{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 22px;
+    text-decoration: underline #181818;
+}
+.pOne{
+    margin-left: 10%;   
+}
+.pTwo{
+    margin-right: 10%;   
+}
+.pOne:hover{
+    text-decoration: underline;
+}
+.pTwo:hover{
+    text-decoration: underline; 
+}

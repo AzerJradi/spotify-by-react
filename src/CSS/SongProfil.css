@@ -1,0 +1,47 @@
+.tthesongCard{
+    width: 80%;
+    height: 900px;
+    margin: 0 auto;
+    background: gray;
+    border-radius: 12px;
+}
+.songTitle-songprofile{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    margin-left: 5%;
+}
+.songSinger-songprofile{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    margin-left: 5%;
+    margin-bottom: 100px;    
+}
+.add{
+    background: white;
+    width: 50px;
+    border-radius: 100%;
+}
+.minus{
+    background: white;
+    width: 50px;
+    border-radius: 100%;
+    margin-left: -40px;
+}
+.minus-add{
+    margin-left: 85%;
+    margin-top: -150px;
+}
+.add:hover{
+    background: greenyellow;
+}
+.minus:hover{
+    background: green;
+}
+.vid{
+    padding-top: 10px;
+    height: 50px;
+    margin-left: 10%;
+    width: 80%;
+}
